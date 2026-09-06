@@ -27,7 +27,7 @@ const projects: Project[] = [
       "Enterprise digital forensic evidence integrity & chain-of-custody platform with SHA-256 binary streaming, 4-tier RBAC, real-time SSE alerts, and forensic Cmd+K palette.",
     github: "https://github.com/ROhitg-upta",
     link: "https://github.com/ROhitg-upta",
-    image: "/images/placeholder.webp",
+    image: "/images/evichain.png",
   },
   {
     name: "Nyaya Revolution",
@@ -37,7 +37,7 @@ const projects: Project[] = [
       "India's situation-based legal learning platform featuring interactive scenario simulation engine, Gemini AI legal tutoring, and comprehensive curriculum analytics.",
     github: "https://github.com/ROhitg-upta/Nyaya-Revolution-H",
     link: "https://nyaya-revolution-h-d6kt.vercel.app/",
-    image: "/images/placeholder.webp",
+    image: "/images/nyaya.png",
   },
   {
     name: "Medi Mitra",
@@ -47,7 +47,7 @@ const projects: Project[] = [
       "AI-driven medical report analyzer with 6-stage extraction pipeline, reference-range comparison, multilingual voice narration, and longitudinal biomarker tracking.",
     github: "https://github.com/ROhitg-upta/MEDI-MITRA",
     link: "https://medi-mitra-beryl.vercel.app/",
-    image: "/images/placeholder.webp",
+    image: "/images/medimitra.png",
   },
   {
     name: "Evently",
@@ -57,7 +57,7 @@ const projects: Project[] = [
       "Trust-first AI event discovery and booking platform built with optimized user flows, social verification, and dynamic search indexing.",
     github: "https://github.com/Devansh0Tyagi-Codes/Evently",
     link: "https://evently-urcai.vercel.app/",
-    image: "/images/placeholder.webp",
+    image: "/images/evently.png",
   },
   {
     name: "Paradox",
@@ -67,7 +67,7 @@ const projects: Project[] = [
       "8-chamber browser-based narrative puzzle game with deterministic S/A/B/C performance rating engine, custom Web Audio synthesis, and full keyboard accessibility.",
     github: "https://github.com/ROhitg-upta/Paradox",
     link: "https://paradox-green.vercel.app/",
-    image: "/images/placeholder.webp",
+    image: "/images/paradox.png",
   },
 ];
 
@@ -78,13 +78,13 @@ const Work = () => {
     function setTranslateX() {
       const box = document.getElementsByClassName("work-box");
       if (box.length === 0) return;
-      const rectLeft = document
-        .querySelector(".work-container")!
-        .getBoundingClientRect().left;
+      const container = document.querySelector(".work-container");
+      if (!container) return;
+      const rectLeft = container.getBoundingClientRect().left;
       const rect = box[0].getBoundingClientRect();
       const parentWidth = box[0].parentElement!.getBoundingClientRect().width;
       let padding: number =
-        parseInt(window.getComputedStyle(box[0]).padding) / 2;
+        parseInt(window.getComputedStyle(box[0]).padding) / 2 || 0;
       translateX = rect.width * box.length - (rectLeft + parentWidth) + padding;
     }
 
@@ -94,20 +94,24 @@ const Work = () => {
       scrollTrigger: {
         trigger: ".work-section",
         start: "top top",
-        end: `+=${translateX}`, // Use actual scroll width
-        scrub: true,
+        end: () => `+=${Math.round(translateX * 0.7)}`,
+        scrub: 1,
         pin: true,
+        anticipatePin: 1,
+        invalidateOnRefresh: true,
         id: "work",
       },
     });
 
     timeline.to(".work-flex", {
-      x: -translateX,
-      ease: "none",
+      x: () => -translateX,
+      ease: "power1.out",
     });
 
-    // Clean up (optional, good practice)
+    ScrollTrigger.addEventListener("refreshInit", setTranslateX);
+
     return () => {
+      ScrollTrigger.removeEventListener("refreshInit", setTranslateX);
       timeline.kill();
       ScrollTrigger.getById("work")?.kill();
     };

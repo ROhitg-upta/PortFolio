@@ -127,11 +127,23 @@
 }
 .work-image img {
   max-width: 100%;
-  max-height: 350px;
+  max-height: 320px;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.5);
+  transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+}
+.work-image-in:hover img {
+  transform: translateY(-4px) scale(1.02);
+  border-color: rgba(251, 141, 255, 0.4);
+  box-shadow: 0 20px 40px rgba(251, 141, 255, 0.15), 0 16px 36px rgba(0, 0, 0, 0.6);
 }
 @media only screen and (max-height: 900px) {
   .work-image img {
-    max-height: 250px;
+    max-height: 240px;
   }
   .work-box {
     padding-top: 40px;
