@@ -39,13 +39,13 @@ const Career = () => {
           <div className="career-info-box">
             <div className="career-info-in">
               <div className="career-role">
-                <h4>Hackathon Winner & Finalist</h4>
-                <h5>SIH, Adobe, UX Imperium, Hack-4-Crown</h5>
+                <h4>Hackathon Participant & Builder</h4>
+                <h5>SIH Internal, UX Imperium, Code Your Cult</h5>
               </div>
-              <h3>2026</h3>
+              <h3>2025 - 2026</h3>
             </div>
             <p>
-              Built Medi Mitra for SIH 2026, shortlisted for Adobe University Hackathon, designed Evently at UX Imperium (NSUT), and shipped Paradox browser game.
+              Active builder in competitive hackathons and engineering challenges: SIH Internal (Medi Mitra), UX Imperium (Evently), Puzzlemaster (Paradox), Abtalk Redesign, and Code Your Cult.
             </p>
           </div>
           <div className="career-info-box">

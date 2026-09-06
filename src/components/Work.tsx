@@ -41,7 +41,7 @@ const projects: Project[] = [
   },
   {
     name: "Medi Mitra",
-    category: "AI Medical Analyzer (SIH 2026)",
+    category: "AI Medical Analyzer (SIH Internal)",
     tools: "React, TypeScript, Python (FastAPI), OpenCV, Tesseract OCR, BioBERT NER, Gemini Pro",
     description:
       "AI-driven medical report analyzer with 6-stage extraction pipeline, reference-range comparison, multilingual voice narration, and longitudinal biomarker tracking.",
@@ -61,7 +61,7 @@ const projects: Project[] = [
   },
   {
     name: "Paradox",
-    category: "Narrative Puzzle Game",
+    category: "Narrative Puzzle Game (Puzzlemaster)",
     tools: "Next.js, React, TypeScript, Web Audio API, ARIA Accessibility, localStorage",
     description:
       "8-chamber browser-based narrative puzzle game with deterministic S/A/B/C performance rating engine, custom Web Audio synthesis, and full keyboard accessibility.",
