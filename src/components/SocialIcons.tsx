@@ -1,9 +1,9 @@
 import {
   FaGithub,
-  FaInstagram,
   FaLinkedinIn,
-  FaXTwitter,
+  FaEnvelope,
 } from "react-icons/fa6";
+import { SiCodechef } from "react-icons/si";
 import "./styles/SocialIcons.css";
 import { TbNotes } from "react-icons/tb";
 import { useEffect } from "react";
@@ -60,27 +60,50 @@ const SocialIcons = () => {
     <div className="icons-section">
       <div className="social-icons" data-cursor="icons" id="social">
         <span>
-          <a href="https://github.com" target="_blank">
+          <a
+            href="https://github.com/ROhitg-upta"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="GitHub"
+          >
             <FaGithub />
           </a>
         </span>
         <span>
-          <a href="https://www.linkedin.com" target="_blank">
+          <a
+            href="https://linkedin.com/in/rohit-k-gupta-98902a3b4"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="LinkedIn"
+          >
             <FaLinkedinIn />
           </a>
         </span>
         <span>
-          <a href="https://x.com" target="_blank">
-            <FaXTwitter />
+          <a
+            href="https://codechef.com/users/caffeine_rohit"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="CodeChef"
+          >
+            <SiCodechef />
           </a>
         </span>
         <span>
-          <a href="https://www.instagram.com" target="_blank">
-            <FaInstagram />
+          <a
+            href="mailto:rohitguptaitc1@gmail.com"
+            title="Email"
+          >
+            <FaEnvelope />
           </a>
         </span>
       </div>
-      <a className="resume-button" href="#">
+      <a
+        className="resume-button"
+        href="mailto:rohitguptaitc1@gmail.com?subject=Resume%20Request%20-%20Rohit%20Gupta"
+        data-cursor="disable"
+        title="Request Resume"
+      >
         <HoverLinks text="RESUME" />
         <span>
           <TbNotes />

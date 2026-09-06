@@ -88,23 +88,24 @@ const WhatIDo = () => {
 
             <div className="what-content-in">
               <h3>DEVELOP</h3>
-              <h4>Description</h4>
+              <h4>Full-Stack & Systems</h4>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas
-                quia aliquid laboriosam ducimus sit molestiae.
+                Architecting full-stack web applications, zero-trust cryptographic platforms, and real-time backend microservices with rigorous test coverage and database-level security.
               </p>
               <h5>Skillset & tools</h5>
               <div className="what-content-flex">
-                <div className="what-tags">JavaScript</div>
-                <div className="what-tags">TypeScript</div>
-                <div className="what-tags">Three.js</div>
-                <div className="what-tags">React</div>
-                <div className="what-tags">Css</div>
-                <div className="what-tags">Node.js</div>
                 <div className="what-tags">Next.js</div>
+                <div className="what-tags">React</div>
+                <div className="what-tags">TypeScript</div>
+                <div className="what-tags">Node.js</div>
                 <div className="what-tags">Express.js</div>
-                <div className="what-tags">PHP</div>
-                <div className="what-tags">MySql</div>
+                <div className="what-tags">PostgreSQL</div>
+                <div className="what-tags">Prisma ORM</div>
+                <div className="what-tags">Redis</div>
+                <div className="what-tags">Supabase</div>
+                <div className="what-tags">C++ (DSA)</div>
+                <div className="what-tags">REST APIs</div>
+                <div className="what-tags">SSE Streaming</div>
               </div>
               <div className="what-arrow"></div>
             </div>
@@ -128,22 +129,23 @@ const WhatIDo = () => {
             </div>
             <div className="what-corner"></div>
             <div className="what-content-in">
-              <h3>DESIGN</h3>
-              <h4>Description</h4>
+              <h3>AI & DESIGN</h3>
+              <h4>Intelligence & Accessibility</h4>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas
-                quia aliquid laboriosam ducimus sit molestiae
+                Engineering LLM applications with strict prompt guardrails, BioBERT NER extraction pipelines, computer vision OCR preprocessing, and accessible UI design.
               </p>
               <h5>Skillset & tools</h5>
               <div className="what-content-flex">
-                <div className="what-tags">Blender</div>
-                <div className="what-tags">Zbrush</div>
-                <div className="what-tags">UI Design</div>
-                <div className="what-tags">Motion</div>
-                <div className="what-tags">Rigging</div>
-                <div className="what-tags">3D Animation</div>
-                <div className="what-tags">Character Design</div>
-                <div className="what-tags">Modelling</div>
+                <div className="what-tags">Gemini API</div>
+                <div className="what-tags">GPT-4o API</div>
+                <div className="what-tags">Prompt Engineering</div>
+                <div className="what-tags">OpenCV</div>
+                <div className="what-tags">Tesseract OCR</div>
+                <div className="what-tags">BioBERT NER</div>
+                <div className="what-tags">Tailwind CSS</div>
+                <div className="what-tags">shadcn/ui</div>
+                <div className="what-tags">Framer Motion</div>
+                <div className="what-tags">ARIA & A11y</div>
               </div>
               <div className="what-arrow"></div>
             </div>
