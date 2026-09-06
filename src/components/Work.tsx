@@ -11,7 +11,7 @@ gsap.registerPlugin(ScrollTrigger);
 interface Project {
   name: string;
   category: string;
-  tools: string;
+  tools: string[];
   description: string;
   github: string;
   link: string;
@@ -22,19 +22,36 @@ const projects: Project[] = [
   {
     name: "EviChain",
     category: "Forensic Integrity OS",
-    tools: "Next.js App Router, TypeScript, Node.js, PostgreSQL (Prisma), SSE, PDFKit, 147 Tests",
+    tools: [
+      "Next.js App Router",
+      "TypeScript",
+      "Node.js",
+      "Neon PostgreSQL",
+      "Prisma ORM",
+      "SSE Alerts",
+      "147 Passing Tests",
+    ],
     description:
-      "Enterprise digital forensic evidence integrity & chain-of-custody platform with SHA-256 binary streaming, 4-tier RBAC, real-time SSE alerts, and forensic Cmd+K palette.",
+      "Enterprise digital forensic evidence integrity & chain-of-custody platform with SHA-256 binary streaming, 4-tier database RBAC, and forensic Cmd+K palette.",
     github: "https://github.com/ROhitg-upta",
     link: "https://github.com/ROhitg-upta",
     image: "/images/placeholder.webp",
   },
   {
     name: "Nyaya Revolution",
-    category: "AI Legal Learning Startup",
-    tools: "Next.js, React, TypeScript, Tailwind CSS, shadcn/ui, Framer Motion, Supabase, Gemini API",
+    category: "Legal Learning Startup",
+    tools: [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "shadcn/ui",
+      "Framer Motion",
+      "Supabase",
+      "Gemini API",
+    ],
     description:
-      "India's situation-based legal learning platform featuring interactive scenario simulation engine, Gemini AI legal tutoring, and comprehensive curriculum analytics.",
+      "India's situation-based legal learning platform with interactive scenario engine, Gemini AI legal reasoning, and progress analytics.",
     github: "https://github.com/ROhitg-upta/Nyaya-Revolution-H",
     link: "https://nyaya-revolution-h-d6kt.vercel.app/",
     image: "/images/placeholder.webp",
@@ -42,7 +59,15 @@ const projects: Project[] = [
   {
     name: "Medi Mitra",
     category: "AI Medical Analyzer (SIH 2026)",
-    tools: "React, TypeScript, Python (FastAPI), OpenCV, Tesseract OCR, BioBERT NER, Gemini Pro",
+    tools: [
+      "React",
+      "TypeScript",
+      "Python",
+      "OpenCV",
+      "Tesseract OCR",
+      "BioBERT NER",
+      "Gemini Pro",
+    ],
     description:
       "AI-driven medical report analyzer with 6-stage extraction pipeline, reference-range comparison, multilingual voice narration, and longitudinal biomarker tracking.",
     github: "https://github.com/ROhitg-upta/MEDI-MITRA",
@@ -51,8 +76,15 @@ const projects: Project[] = [
   },
   {
     name: "Evently",
-    category: "AI Event Platform (UX Imperium)",
-    tools: "React, Next.js, TypeScript, Tailwind CSS, AI Discovery Engine",
+    category: "AI Event Discovery (UX Imperium)",
+    tools: [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "AI Search",
+      "Event Booking",
+    ],
     description:
       "Trust-first AI event discovery and booking platform built with optimized user flows, social verification, and dynamic search indexing.",
     github: "https://github.com/Devansh0Tyagi-Codes/Evently",
@@ -62,7 +94,14 @@ const projects: Project[] = [
   {
     name: "Paradox",
     category: "Narrative Puzzle Game",
-    tools: "Next.js, React, TypeScript, Web Audio API, ARIA Accessibility, localStorage",
+    tools: [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Web Audio API",
+      "ARIA A11y",
+      "Zero Lint Errors",
+    ],
     description:
       "8-chamber browser-based narrative puzzle game with deterministic S/A/B/C performance rating engine, custom Web Audio synthesis, and full keyboard accessibility.",
     github: "https://github.com/ROhitg-upta/Paradox",
@@ -126,13 +165,20 @@ const Work = () => {
                 <div className="work-title">
                   <h3>0{index + 1}</h3>
 
-                  <div>
+                  <div className="work-title-right">
+                    <span className="work-badge">{project.category}</span>
                     <h4>{project.name}</h4>
-                    <p>{project.category}</p>
                   </div>
                 </div>
-                <h4>Tools and features</h4>
-                <p>{project.tools}</p>
+
+                <div className="work-tools-list">
+                  {project.tools.map((tool, tIdx) => (
+                    <span className="work-tool-pill" key={tIdx}>
+                      {tool}
+                    </span>
+                  ))}
+                </div>
+
                 <p className="work-desc">{project.description}</p>
                 <div className="work-action-links">
                   {project.link && (
@@ -140,7 +186,7 @@ const Work = () => {
                       href={project.link}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="work-btn"
+                      className="work-btn work-btn-primary"
                       data-cursor="disable"
                     >
                       Live Demo <MdArrowOutward />
@@ -151,7 +197,7 @@ const Work = () => {
                       href={project.github}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="work-btn"
+                      className="work-btn work-btn-secondary"
                       data-cursor="disable"
                     >
                       <FaGithub /> GitHub
