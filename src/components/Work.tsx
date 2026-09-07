@@ -25,8 +25,8 @@ const projects: Project[] = [
     tools: "Next.js App Router, TypeScript, Node.js, PostgreSQL (Prisma), SSE, PDFKit, 147 Tests",
     description:
       "Enterprise digital forensic evidence integrity & chain-of-custody platform with SHA-256 binary streaming, 4-tier RBAC, real-time SSE alerts, and forensic Cmd+K palette.",
-    github: "https://github.com/ROhitg-upta",
-    link: "https://github.com/ROhitg-upta",
+    github: "https://github.com/ROhitg-upta/EviChain-H",
+    link: "https://evi-chain-h.vercel.app/",
     image: "/images/evichain.png",
   },
   {
