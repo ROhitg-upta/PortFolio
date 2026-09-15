@@ -18,7 +18,7 @@ const Career = () => {
                 <h4>B.Tech in Computer Science</h4>
                 <h5>ABES Engineering College</h5>
               </div>
-              <h3>2023 - 2027</h3>
+              <h3>2025 - 2029</h3>
             </div>
             <p>
               CGPA: 8.865 / 10. Deep grounding in Data Structures, Algorithms in C++, Operating Systems, DBMS, and scalable software architecture.
