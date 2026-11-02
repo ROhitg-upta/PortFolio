@@ -8,6 +8,7 @@ clickElement.addEventListener("click", () => {
   }
 });
 
+
 video.addEventListener("ended", () => {
   if (endListener) return console.log("listener ended");
 
